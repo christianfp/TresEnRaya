@@ -1,0 +1,99 @@
+
+
+
+
+<form method='post' action='/'>
+<input type='submit' value='Menu Principal'>
+</form>
+
+<form method='post' action='/Reiniciar' name='formulario'>
+<input type='submit' value='Reiniciar' style='width:70px; height:25px' >
+</form>
+
+
+
+<% if @ganador=="Empate" || @ganador=="X" || @ganador=="O"%>
+   <p id="demo" >El ganador es: <%=@ganador%></p> 
+<%end%>
+<TABLE BORDER>
+<tr> 
+    <td>
+        <% if @ganador==" " || @ganador==nil%>
+        <button id="11" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(11)%></button>
+        <%else%>
+        <button disabled id="11" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(11)%></button>
+        <%end%>
+       
+        
+    </td> 
+    <td>
+        <% if @ganador==" " || @ganador==nil%>
+            <button id="12" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(12)%></button>
+        <%else%>
+            <button disabled id="12" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(12)%></button>
+        <%end%>
+    </td> 
+    <td>
+        <% if @ganador==" " || @ganador==nil%>
+            <button id="13" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(13)%></button>
+        <%else%>
+            <button disabled id="13" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(13)%></button>
+        <%end%>
+    </td> 
+</tr> 
+<tr> 
+    <td>
+        <% if @ganador==" " || @ganador==nil%>
+            <button id="21" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(21)%></button>
+        <%else%>
+            <button disabled id="21" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(21)%></button>
+        <%end%>
+
+    </td> 
+    <td>
+        <% if @ganador==" " || @ganador==nil%>
+            <button id="22" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(22)%></button>
+        <%else%>
+            <button disabled id="22" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(22)%></button>
+        <%end%>
+    </td> 
+    <td>
+        <% if @ganador==" " || @ganador==nil%>
+            <button id="23" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(23)%></button>
+        <%else%>
+            <button disabled id="23" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(23)%></button>
+        <%end%>
+    </td> 
+</tr> 
+<tr> 
+    <td>
+       <% if @ganador==" " || @ganador==nil%>
+            <button id="31" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(31)%></button>
+        <%else%>
+            <button disabled id="31" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(31)%></button>
+        <%end%>
+    </td> 
+    <td>
+        <% if @ganador==" " || @ganador==nil%>
+            <button id="32" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(32)%></button>
+        <%else%>
+            <button disabled id="32" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(32)%></button>
+        <%end%>
+
+    </td> 
+    <td>
+        <% if @ganador==" " || @ganador==nil%>
+            <button id="33" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(33)%></button>
+        <%else%>
+            <button disabled id="33" onclick="myFunction(id)"  style='width:70px; height:85px'> <%=$game.getCasilla(33)%></button>
+        <%end%>
+    </td> 
+</tr> 
+</table> 
+
+<script>
+function myFunction(id) {
+    document.formulario.action='/'+id;
+    document.formulario.submit();
+    }
+</script>
