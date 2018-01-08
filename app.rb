@@ -41,9 +41,10 @@ end
 
 post '/11' do
     $game.anotarPorTurno(11)
+    @ganador=$game.devolverGanador(12)
     if ($multi && (@ganador==" " || @ganador==nil))
         pos=$game.computadora($game.getSegundo())
-        $game.anotarPorTurno(pos)
+        @jugadorActual=$game.anotarPorTurno(pos)
     end
     @ganador=$game.devolverGanador(11)
     if (@ganador==" " && $multi)
@@ -57,6 +58,7 @@ end
 
 post '/12' do
     $game.anotarPorTurno(12)
+    @ganador=$game.devolverGanador(12)
     if ($multi && (@ganador==" " || @ganador==nil))
         pos=$game.computadora($game.getSegundo())
         $game.anotarPorTurno(pos)
@@ -72,6 +74,7 @@ post '/12' do
 end
 post '/13' do
     $game.anotarPorTurno(13)
+    @ganador=$game.devolverGanador(13)
     if ($multi && (@ganador==" " || @ganador==nil))
         pos=$game.computadora($game.getSegundo())
         $game.anotarPorTurno(pos)
@@ -87,6 +90,7 @@ post '/13' do
 end
 post '/21' do
     $game.anotarPorTurno(21)
+    @ganador=$game.devolverGanador(21)
     if ($multi && (@ganador==" " || @ganador==nil))
         pos=$game.computadora($game.getSegundo())
         $game.anotarPorTurno(pos)
@@ -102,6 +106,7 @@ post '/21' do
 end
 post '/22' do
     $game.anotarPorTurno(22)
+    @ganador=$game.devolverGanador(22)
     if ($multi && (@ganador==" " || @ganador==nil))
         pos=$game.computadora($game.getSegundo())
         $game.anotarPorTurno(pos)
@@ -117,6 +122,7 @@ post '/22' do
 end
 post '/23' do
     $game.anotarPorTurno(23)
+    @ganador=$game.devolverGanador(23)
     if ($multi && (@ganador==" " || @ganador==nil))
         pos=$game.computadora($game.getSegundo())
         $game.anotarPorTurno(pos)
@@ -132,6 +138,7 @@ post '/23' do
 end
 post '/31' do
     $game.anotarPorTurno(31)
+    @ganador=$game.devolverGanador(31)
     if ($multi && (@ganador==" " || @ganador==nil))
         pos=$game.computadora($game.getSegundo())
         $game.anotarPorTurno(pos)
@@ -147,6 +154,7 @@ post '/31' do
 end
 post '/32' do
     $game.anotarPorTurno(32)
+    @ganador=$game.devolverGanador(32)
     if ($multi && (@ganador==" " || @ganador==nil))
         pos=$game.computadora($game.getSegundo())
         $game.anotarPorTurno(pos)
@@ -163,6 +171,7 @@ post '/32' do
 end
 post '/33' do
     $game.anotarPorTurno(33)
+    @ganador=$game.devolverGanador(33)
     if ($multi && (@ganador==" " || @ganador==nil))
         pos=$game.computadora($game.getSegundo())
         $game.anotarPorTurno(pos)

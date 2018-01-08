@@ -13,8 +13,6 @@ Then("deberia mostrar el boton {string}") do |string|
 When("presiono el boton {string}") do |string|
     click_button(string)
   end
-Then("deberia mostrar el mensaje {string}") do |string|
+  Then("deberia mostrar el mensaje {string}") do |string|
     last_response.body.should =~ /#{string}/m
-end
-
-  
+  end

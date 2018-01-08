@@ -7,15 +7,19 @@ def StartDefault()
     @segundo=nil
     @multi=nil
     @ganador=nil
+    @jugadorActual=""
 end
 def initialize
     
+end
+def devolverTurnoActual
+    return @jugadorActual
 end
 def getSegundo()
     return @segundo
 end
 def setMulti(valor)
-    @multi=valor
+    @multi=valor    
 end
 def devolverPerdedor(posicion)
     if(devolverGanador(posicion)=="X")
@@ -72,6 +76,7 @@ def duplicarCaracter(caracter)
 end
 def setPrimero(valor)
     @Primero=valor
+    @jugadorActual=valor
     if(valor=="X")
         @segundo="O"
     else
@@ -97,12 +102,16 @@ def anotarJugada(valor,caracter)
     return respuesta
 end
 def anotarPorTurno (posicion)
-    if(@turno %2 !=0)
-        anotarJugada(posicion,@Primero)
-    
-    else
-        anotarJugada(posicion,@segundo)
+    if (@ganador==" " || @ganador==nil)
+        if(@turno %2 !=0)
+            anotarJugada(posicion,@Primero)
+            @jugadorActual=@segundo
+        else
+            anotarJugada(posicion,@segundo)
+            @jugadorActual=@Primero
+        end
     end
+    
 end
 def getCasilla(posicion)
     fila=(posicion/10)

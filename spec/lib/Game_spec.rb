@@ -226,4 +226,37 @@ describe Game do
         @game.anotarJugada(13,"X")
         expect(@game.devolverGanador(13)).to eq "Empate"
     end
+
+    it "Si el jugador X anota en la posicion 11 deberia devolver la siguiente jugada igual a O"do
+        @game.StartDefault()
+        @game.setPrimero("X")
+        @game.anotarPorTurno(11)
+        expect(@game.devolverTurnoActual).to eq "O"
+    end
+    it "Si el jugador O anota en la posicion 11 deberia devolver la siguiente jugada igual a X"do
+    @game.StartDefault()
+    @game.setPrimero("O")
+    @game.anotarPorTurno(11)
+    expect(@game.devolverTurnoActual).to eq "X"
+    end
+    it "SI jugador X gana, deberia empezar el pederdor por tanto devolver turno actual igual a 'O'" do
+        @game.StartDefault()
+        @game.setPrimero("X")
+        @game.anotarPorTurno(11)
+        @game.anotarPorTurno(12)
+        @game.anotarPorTurno(22)
+        @game.anotarPorTurno(13)
+        @game.anotarPorTurno(33)
+        expect(@game.devolverTurnoActual).to eq "O"
+    end
+    it "SI jugador O gana, deberia empezar el pederdor por tanto devolver turno actual igual a 'X'" do
+        @game.StartDefault()
+        @game.setPrimero("O")
+        @game.anotarPorTurno(11)
+        @game.anotarPorTurno(12)
+        @game.anotarPorTurno(22)
+        @game.anotarPorTurno(13)
+        @game.anotarPorTurno(33)
+        expect(@game.devolverTurnoActual).to eq "X"
+    end
 end

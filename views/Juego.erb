@@ -11,10 +11,16 @@
 </form>
 
 
-
 <% if @ganador=="Empate" || @ganador=="X" || @ganador=="O"%>
    <p id="demo" >El ganador es: <%=@ganador%></p> 
+
+<%else%>
+<p>
+    Turno Jugador: <%=$game.devolverTurnoActual%>
+</p>
 <%end%>
+
+
 <TABLE BORDER>
 <tr> 
     <td>

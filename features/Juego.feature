@@ -51,7 +51,6 @@ Scenario:
             Given   Visito la pagina del juego
             When    presiono el boton "Menu Principal"  
             Then    deberia mostrar el boton "Multijugador"
-
-
-            
-            
+Scenario:
+            Given   Visito la pagina del juego
+            Then    deberia mostrar el mensaje "Turno Jugador: X"
